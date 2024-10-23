@@ -7,8 +7,6 @@ public class Car {
     private String model;
     private int year;
 
-
-    public Car() {}
     public Car(Long id,String make, String model, int year) {
         this.id = id;
         this.make = make;
