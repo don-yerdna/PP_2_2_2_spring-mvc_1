@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Cars</title>
-    <style>table th, table td {padding: 5px;}</style>
+    <style>table th, table td {
+        padding: 5px;
+    }</style>
 </head>
 <body>
+
 <table border="1">
     <tr>
         <th>make</th>
@@ -20,8 +23,8 @@
     </tr>
 
 </table>
-<div th:each="">
-
+<div th:each="i : ${#numbers.sequence( 1, count/1)}">
+    <a th:href="@{/cars(count=${i})}"><span th:text="${i}"/></a>
 </div>
 </body>
 </html>

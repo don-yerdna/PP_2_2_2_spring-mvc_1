@@ -12,13 +12,17 @@ import web.service.CarServiceImp;
 @Controller
 @RequestMapping("/cars")
 public class CarController {
+    private CarServiceImp carService;
 
     @Autowired
-    private CarServiceImp carService;
+    public CarController(CarServiceImp carService) {
+        this.carService = carService;
+    }
 
     @GetMapping()
     public String cars(@RequestParam(value = "count", defaultValue = "5") int count, Model model) {
-        model.addAttribute("cars", carService.listCars(count));
+        model.addAttribute("cars", carService.getCarsOfCount(count));
+        model.addAttribute("count", carService.getCountCars());
         return "cars/index";
     }
 }
