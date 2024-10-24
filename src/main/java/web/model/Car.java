@@ -1,18 +1,12 @@
 package web.model;
 
 import java.util.Objects;
+
 public class Car {
     private Long id;
     private String make;
     private String model;
     private int year;
-
-    public Car(Long id,String make, String model, int year) {
-        this.id = id;
-        this.make = make;
-        this.model = model;
-        this.year = year;
-    }
 
     public Long getId() {
         return id;
@@ -67,6 +61,4 @@ public class Car {
                 ", year=" + year +
                 '}';
     }
-
-
 }
