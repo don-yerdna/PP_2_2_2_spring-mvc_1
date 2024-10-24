@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class CarDAOImp implements CarDAO {
+public class CarDaoImp implements CarDao {
     private static long CARS_COUNT;
-    private List<Car> cars;
+    private final List<Car> cars;
 
     {
         cars = new ArrayList<>();

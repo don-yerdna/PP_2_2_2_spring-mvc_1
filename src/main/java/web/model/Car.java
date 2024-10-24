@@ -3,7 +3,7 @@ package web.model;
 import java.util.Objects;
 
 public class Car {
-    private Long id;
+    private long id;
     private String make;
     private String model;
     private int year;
